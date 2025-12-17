@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>ENIAC PROJECT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" href="img/eniac-rojo.png" />
+
+<!-- PRE-THEME (forzar dark por defecto si no hay preferencia guardada) -->
+<script>
+  (function() {
+    try {
+      const Key = 'theme';
+      const stored = localStorage.getItem(Key); // 'light' | 'dark' | null
+      // Si hay algo en localStorage lo usamos; si no, forzamos 'dark' por defecto
+      const initial = stored ? stored : 'dark';
+      document.documentElement.dataset.theme = initial;
+  } catch (e) {
+      // si localStorage falla, dejamos dark por defecto
+      document.documentElement.dataset.theme = 'dark';
+  }
+})();
+</script>
+
+<!-- --- PRE-THEME / PREVENT FOUC: debe ir ANTES del CSS externo --- -->
+<script>
+  // Comprobamos el parámetro lo antes posible y marcamos el html
+  (function () {
+    try {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('mode') === 'skipintro') {
+        document.documentElement.classList.add('skip-intro');
+      }
+    } catch (e) {
+      // en navegadores antiguos simplemente no hacemos nada
+    }
+  })();
+</script>
+
+<style>
+  /* Si venimos con ?mode=skipintro ocultamos instantáneamente la intro
+     y mostramos el hub para evitar el flash. Este CSS debe cargarse inline. */
+  html.skip-intro #intro { display: none !important; visibility: hidden !important; }
+  html.skip-intro #hub { display: block !important; visibility: visible !important; }
+  html.skip-intro body { overflow: auto !important; }
+</style>
+<!-- --- FIN PRE-THEME --- -->
+
+
+<!-- CSS externo -->
+<link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+
+    <!-- SECCIÓN VÍDEO INICIAL -->
+    <section id="intro" class="intro">
+        <video id="introVideo" autoplay muted playsinline>
+            <source src="mp4/video-eniac.mp4" type="video/mp4" />
+            Tu navegador no soporta vídeo HTML5.
+        </video>
+
+        <div class="intro-overlay">
+            <h1 class="intro-title">ENIAC PROJECT</h1>
+            <p class="intro-subtitle">
+                Un viaje por la historia secreta de las programadoras del ENIAC:
+                seis mujeres que cambiaron la computación… y casi nadie las recuerda.
+            </p>
+            <button id="skipButton" class="intro-button">
+                Entrar al proyecto
+            </button>
+            <button id="soundToggle" class="intro-button intro-button-secondary">
+                Activar sonido
+            </button>
+        </div>
+    </section>
+
+    <!-- SECCIÓN HUB PRINCIPAL (6 MUJERES) -->
+    <main id="hub" class="hidden">
+        <div class="main-wrapper">
+            <aside class="sidebar">
+                <div class="logo-block">
+                    <h1>ENIAC PROJECT</h1>
+                    <span>The Secret Rosies</span>
+                </div>
+
+                <p class="sidebar-title">Programadoras principales</p>
+
+                <ul class="names-list">
+                    <li><a class="name-link" href="entradas/entrada1.html">Kathleen McNulty Mauchly</a></li>
+                    <li><a class="name-link" href="entradas/entrada2.html">Betty Snyder Holberton</a></li>
+                    <li><a class="name-link" href="entradas/entrada3.html">Marlyn Wescoff Meltzer</a></li>
+                    <li><a class="name-link" href="entradas/entrada4.html">Frances Bilas Spence</a></li>
+                    <li><a class="name-link" href="entradas/entrada5.html">Ruth Lichterman Teitelbaum</a></li>
+                    <li><a class="name-link" href="entradas/entrada6.html">Jean Jennings Bartik</a></li>
+                </ul>
+
+                <div class="sidebar-footer">
+                    ENIAC (Electronic Numerical Integrator and Computer) fue uno de los
+                    primeros ordenadores electrónicos de propósito general. Detrás de sus
+                    cálculos había mujeres que programaban a mano cables e interruptores,
+                    organizando todo el funcionamiento interno.
+                </div>
+            </aside>
+
+            <section class="content">
+                <header class="content-header">
+                    <div class="content-title-block">
+                        <h2>THE SECRET ROSIES</h2>
+                        <p>
+                            Estas seis mujeres fueron pioneras de la programación moderna.
+                            Aquí puedes explorar quiénes eran y qué aportaron al ENIAC.
+                            Pulsa en cada retrato o en su nombre para leer su historia.
+                        </p>
+                    </div>
+                    <div>
+                        <p class="tagline">Historia · Tecnología · Mujeres en STEM</p>
+
+                        <a class="back-link" href="index.html">← Introducción</a>
+                        <a class="back-link" href="contacto.html" style="margin-left:0.6rem;">Contacto</a>
+                    </div>
+
+                </header>
+
+                <section class="grid">
+                    <!-- 1 -->
+                    <a class="card" href="entradas/entrada1.html">
+                        <img src="img/kathleenmcnulty.jpg" alt="Foto de Kathleen McNulty Mauchly Antonelli" />
+                        <div class="card-info">
+                            <p class="card-name">Kathleen McNulty</p>
+                            <p class="card-role">Matemática y programadora del ENIAC.</p>
+                            <p class="card-link">Ver biografía →</p>
+                        </div>
+                    </a>
+
+                    <!-- 2 -->
+                    <a class="card" href="entradas/entrada2.html">
+                        <img src="img/bettyholberton.jpg" alt="Foto de Frances “Betty” Snyder Holberton" />
+                        <div class="card-info">
+                            <p class="card-name">Betty Snyder Holberton</p>
+                            <p class="card-role">Innovadora en software y lenguajes.</p>
+                            <p class="card-link">Ver biografía →</p>
+                        </div>
+                    </a>
+
+                    <!-- 3 -->
+                    <a class="card" href="entradas/entrada3.html">
+                        <img src="img/MarlynMeltzer.jpg" alt="Foto de Marlyn Wescoff Meltzer" />
+                        <div class="card-info">
+                            <p class="card-name">Marlyn Wescoff Meltzer</p>
+                            <p class="card-role">Programadora de cálculo balístico.</p>
+                            <p class="card-link">Ver biografía →</p>
+                        </div>
+                    </a>
+
+                    <!-- 4 -->
+                    <a class="card" href="entradas/entrada4.html">
+                        <img src="img/FrancesSpence.jpg" alt="Foto de Frances Bilas Spence" />
+                        <div class="card-info">
+                            <p class="card-name">Frances Bilas Spence</p>
+                            <p class="card-role">Especialista en programación manual.</p>
+                            <p class="card-link">Ver biografía →</p>
+                        </div>
+                    </a>
+
+                    <!-- 5 -->
+                    <a class="card" href="entradas/entrada5.html">
+                        <img src="img/RuthLichterman.jpg" alt="Foto de Ruth Lichterman Teitelbaum" />
+                        <div class="card-info">
+                            <p class="card-name">Ruth Lichterman</p>
+                            <p class="card-role">Experta en depuración del ENIAC.</p>
+                            <p class="card-link">Ver biografía →</p>
+                        </div>
+                    </a>
+
+                    <!-- 6 -->
+                    <a class="card" href="entradas/entrada6.html">
+                        <img src="img/JeanJenningsBartik.jpg" alt="Foto de Jean Jennings Bartik" />
+                        <div class="card-info">
+                            <p class="card-name">Jean Jennings Bartik</p>
+                            <p class="card-role">Líder en la transición a nuevos ordenadores.</p>
+                            <p class="card-link">Ver biografía →</p>
+                        </div>
+                    </a>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <!-- JS externo -->
+    <script src="js/main.js"></script>
+
+    <!-- LOGO -->
+    <div class="site-logo" role="img" aria-label="ENIAC PROJECT">
+      <img src="img/eniac-rojo.png" alt="ENIAC PROJECT logo" />
+  </div>
+
+<!-- BOTÓN TEMA-->
+<button class="color-scheme-toggler" type="button" aria-label="Cambiar tema">
+  <span class="color-scheme-toggler__icon color-scheme-toggler__icon--light">☀️</span>
+  <span class="color-scheme-toggler__icon color-scheme-toggler__icon--dark">🌙</span>
+</button>
+
+</body>
+</html>
