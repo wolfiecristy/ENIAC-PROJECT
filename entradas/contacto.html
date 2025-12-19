@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Contacto – ENIAC PROJECT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="icon" type="image/png" href="../img/eniac-rojo.png" />
+    
+    <script>
+      (function () {
+        const userTheme = localStorage.getItem('theme');
+        const mediaTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+        document.documentElement.dataset.theme = userTheme || mediaTheme;
+    })();
+</script>
+
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body class="profile-page-body">
+    <main class="profile-container contact-page">
+
+        <!-- COLUMNA DE TEXTO -->
+        <section class="profile-text">
+            <div class="badge">ENIAC PROJECT · The Secret Rosies</div>
+            <h1>Formulario de contacto</h1>
+            <h2>¿Quieres dejarnos un mensaje?</h2>
+
+            <form 
+            id="contactForm" 
+            class="contact-form"
+            action="https://formsubmit.co/TU_CORREO"
+            method="POST">
+
+            <!-- NOMBRE -->
+            <label>Nombre:</label>
+            <input type="text" id="name" required>
+
+            <!-- EMAIL -->
+            <label>Email:</label>
+            <input type="email" id="email" required>
+
+            <!-- OCUPACIÓN -->
+            <label>Ocupación:</label>
+            <select id="ocupacion" required>
+                <option value="">Selecciona una opción</option>
+                <option value="Estudiante">Estudiante</option>
+                <option value="Trabajador por cuenta propia">Trabajador por cuenta propia</option>
+                <option value="Trabajador por cuenta ajena">Trabajador por cuenta ajena</option>
+                <option value="Desempleado">Desempleado</option>
+            </select>
+
+            <!-- TITULO -->
+            <label>Título del mensaje:</label>
+            <input type="text" id="titulo" required>
+
+            <!-- CUERPO -->
+            <label>Mensaje:</label>
+            <textarea id="mensaje" rows="5" required></textarea>
+
+            <!-- BOTONES -->
+            <div class="form-buttons">
+                <button type="submit" class="back-link">Enviar</button>
+                <button type="reset" class="back-link">Reiniciar</button>
+            </div>
+        </form>
+
+        <!-- MENSAJE FINAL -->
+        <div id="thankYouMessage" class="thank-you hidden"></div>
+
+        <a class="back-link" href="../index.html?mode=skipintro">← Volver al hub</a>
+
+        <p class="meta">Proyecto ENIAC – Tecnología · Curso 2025/2026.</p>
+    </section>
+</main>
+
+<script src="../js/contacto.js"></script>
+
+<!-- LOGO -->
+<div class="site-logo" role="img" aria-label="ENIAC PROJECT">
+  <img src="../img/eniac-rojo.png" alt="ENIAC PROJECT logo" />
+</div>
+
+<button class="color-scheme-toggler" type="button" aria-label="Cambiar tema">
+    <span class="color-scheme-toggler__icon color-scheme-toggler__icon--light" aria-hidden="true">☀️</span>
+    <span class="color-scheme-toggler__icon color-scheme-toggler__icon--dark" aria-hidden="true">🌙</span>
+</button>
+</div>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Jean Jennings</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="icon" type="image/png" href="../img/eniac-rojo.png" />
+    
+    <script>
+      (function () {
+        const userTheme = localStorage.getItem('theme');
+        const mediaTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+        document.documentElement.dataset.theme = userTheme || mediaTheme;
+    })();
+</script>
+
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body class="profile-page-body">
+    <main class="profile-container">
+        <section class="profile-text">
+            <div class="badge">ENIAC PROJECT · The Secret Rosies</div>
+            <h1>Jean Jennings Bartik</h1>
+            <h2>Programadora del ENIAC y referente en la transición hacia sistemas más avanzados.</h2>
+
+            <h3>Formación científica y perfil técnico</h3>
+
+            <p>
+                Jean Jennings Bartik nació en 1924 en Missouri, Estados Unidos. Desde joven mostró una gran habilidad para resolver problemas complejos y razonar de manera lógica. Estas habilidades fueron esenciales más tarde para la programación del ENIAC. Se graduó en matemáticas, una carrera en la que no solía haber apenas representación femenina. Su perfil académico e inteligencia la convirtieron en una pionera del <b>pensamiento computacional</b>, la base de la informática moderna.
+
+                Antes del ENIAC, Jean trabajaba con cálculos matemáticos complejos, pero su entrenamiento le permitió manejar el funcionamiento de las primeras computadoras electrónicas con facilidad, que todavía no tenían lenguajes de programación.
+
+            </p>
+
+            <h3>Arquitectura de programas en ENIAC</h3>
+
+            <p>
+                Jean formó parte del primer grupo de programadoras del ENIAC (Electronic Numerical Integrator and Computer), un ordenador que usaba más de 17.000 válvulas de vacío y tenía un tamaño de 167 m². Programar esta máquina no consistía en escribir código, sino en establecer físicamente los paneles de control, enlazar cables y regular interruptores. Con esto se conseguía poner en marcha secuencias de cálculo.
+
+                Ella colaboró en la creación de los primeros diagramas de flujo y en la implementación de subrutinas, bloques de instrucciones reutilizables que hacían posible mejorar procesos complejos. Asimismo, Jean implementó métodos de depuración sistemática para identificar errores en los cálculos y garantizar que los programas funcionaran adecuadamente. Todos estos conceptos son cruciales hoy en día en la programación contemporánea, el desarrollo web y el software empresarial.
+.
+            </p>
+
+            <h3>Impacto en la computación moderna</h3>
+
+            <p>
+                Tras el ENIAC, Jean trabajó en <b>BINAC y UNIVAC</b>, ordenadores pioneros en la era comercial. En estos proyectos participó en la transición hacia sistemas con <b>programas almacenados en memoria</b>, lo que abrió la puerta a la creación de sistemas operativos y software automatizado. Su labor tuvo un impacto en la creación de estructuras de datos, metodologías y lenguajes de programación contemporáneos que hoy se emplean en bases de datos, computación en la nube, aplicaciones y también en Internet.
+
+                Además, Jean se volvió un modelo de liderazgo femenino en tecnología al mostrar que las mujeres eran capaces de innovar y participar en áreas estratégicas y técnicas.
+
+            </p>
+
+            <p class="tagline">
+                Su figura representa la continuidad entre las programadoras pioneras y el desarrollo
+                intelectual de la programación como disciplina.
+            </p>
+
+<!-- BIBLIOGRAFÍA -->
+<button type="button" class="back-link bib-toggle" aria-expanded="false">
+    Bibliografía <span class="bib-arrow">▾</span>
+</button>
+
+<div class="bibliography" aria-hidden="true">
+  <ul>
+<li>
+  Bartik, J. J. —
+  <a href="https://es.wikipedia.org/wiki/Jean_Jennings_Bartik"
+     target="_blank"
+     rel="noopener"
+     class="bib-link">
+    Jean Jennings Bartik
+    <span class="bib-icon">↗</span>
+  </a>
+</li>
+<li>
+  WeBuildIt —
+  <a href="https://webuildit.tech/es/top-secret-rosies-pioneras-en-la-programacion-de-eniac/"
+     target="_blank"
+     rel="noopener"
+     class="bib-link">
+    Top Secret Rosies: Pioneras en la programación del ENIAC
+    <span class="bib-icon">↗</span>
+  </a>
+</li>
+<li>
+  Wikipedia —
+  <a href="https://en.wikipedia.org/wiki/Jean_Bartik"
+     target="_blank"
+     rel="noopener"
+     class="bib-link">
+    Jean Bartik
+    <span class="bib-icon">↗</span>
+  </a>
+</li>
+<li>
+  Computer History Museum —
+  <a href="https://www.computerhistory.org/revolution/birth-of-the-computer/4/78"
+     target="_blank"
+     rel="noopener"
+     class="bib-link">
+    ENIAC Programmers
+    <span class="bib-icon">↗</span>
+  </a>
+</li>
+  </ul>
+</div>
+
+            <a class="back-link" href="../index.html?mode=skipintro">← Volver</a>
+            <a class="back-link" href="contacto.html">Formulario de contacto</a>
+
+            <p class="meta">
+                Proyecto ENIAC – Tecnología · Curso 2025/2026.
+            </p>
+        </section>
+
+        <aside class="profile-image-wrapper">
+            <img src="../img/JeanJenningsBartik.jpg" alt="Retrato de Jean Jennings Bartik">
+        </aside>
+    </main>
+
+    <!-- LOGO -->
+    <div class="site-logo" role="img" aria-label="ENIAC PROJECT">
+      <img src="../img/eniac-rojo.png" alt="ENIAC PROJECT logo" />
+  </div>
+
+  <button class="color-scheme-toggler" type="button" aria-label="Cambiar tema">
+    <span class="color-scheme-toggler__icon color-scheme-toggler__icon--light" aria-hidden="true">☀️</span>
+    <span class="color-scheme-toggler__icon color-scheme-toggler__icon--dark" aria-hidden="true">🌙</span>
+</button>
+</div>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>
