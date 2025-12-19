@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Ruth Lichterman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="icon" type="image/png" href="../img/eniac-rojo.png" />
+    
+    <script>
+      (function () {
+        const userTheme = localStorage.getItem('theme');
+        const mediaTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+        document.documentElement.dataset.theme = userTheme || mediaTheme;
+    })();
+</script>
+
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body class="profile-page-body">
+    <main class="profile-container">
+        <section class="profile-text">
+            <div class="badge">ENIAC PROJECT · The Secret Rosies</div>
+            <h1>Ruth Lichterman</h1>
+            <h2>Programadora del ENIAC y especialista en depuración y verificación de programas.</h2>
+
+            <h3>Formación científica y perfil técnico</h3>
+
+            <p>
+                Ruth Lichterman Teitelbaum nació en Nueva York en el año 1924.Se graduó en Matemáticas en el Hunter College, que durante ese período era una de las universidades con mayor prestigio para mujeres. Desde el inicio de su carrera, mostró una gran habilidad para resolver problemas complejos, analizar datos y pensar lógicamente. Estas habilidades fueron fundamentales en su trabajo posterior en programación e informática.
+
+                Ruth ya realizaba cálculos científicos manuales antes de trabajar con computadoras electrónicas, lo cual la capacitó para entender los procedimientos matemáticos que serían automatizados más tarde.
+
+            </p>
+
+            <p>
+                Su labor exigía revisar en detalle las conexiones físicas del sistema, comprobar el estado
+                de los interruptores y analizar paso a paso la ejecución de los programas. Este proceso
+                riguroso permitía garantizar que la máquina produjera resultados fiables.
+            </p>
+
+            <h3>Arquitectura de programas en ENIAC</h3>
+
+            <p>
+                Ruth fue una de las seis programadoras fundadoras del ENIAC. En esa institución, se dedicó a diseñar rutinas de cálculo y a organizar programas complejos. Su trabajo consistía en montar paneles, definir secuencias lógicas a través de cables físicos y calibrar interruptores con el fin de realizar cálculos matemáticos rápidamente.
+
+                La documentación técnica fue un elemento esencial de su trabajo. Contribuyó a la elaboración de instrucciones y guías internas para el manejo del ENIAC, lo que actualmente es esencial en el desarrollo de software, manuales técnicos y comunidades de programadores en línea.
+
+            </p>
+
+            <h3>Evolución hacia la computación moderna</h3>
+
+            <p>
+                
+                Tras finalizar su trabajo con el ENIAC, Ruth continuó su carrera como formadora técnica en el <b>Aberdeen Proving Ground</b>, una instalación clave del ejército estadounidense. Allí se encargó de enseñar a nuevas generaciones de programadoras a utilizar sistemas electrónicos complejos, contribuyendo directamente a la expansión del conocimiento tecnológico.
+
+                Su papel puede considerarse precursor de lo que hoy son las plataformas de aprendizaje online, los tutoriales digitales y los foros técnicos en Internet. Gracias a su trabajo, el conocimiento informático comenzó a estructurarse y difundirse de manera más organizada.
+
+                Ruth Lichterman Teitelbaum dejó un legado esencial en la educación tecnológica y en la transmisión de conocimiento digital.
+
+            </p>
+
+            <p class="tagline">
+                Su trabajo revela que la programación no solo consiste en diseñar instrucciones, sino
+                en examinar, probar y perfeccionar el funcionamiento de los programas en la práctica.
+            </p>
+
+<!-- BIBLIOGRAFÍA -->
+<button type="button" class="back-link bib-toggle" aria-expanded="false">
+    Bibliografía <span class="bib-arrow">▾</span>
+</button>
+
+<div class="bibliography" aria-hidden="true">
+    <ul>
+        <li>
+          Wikipedia —
+          <a href="https://es.wikipedia.org/wiki/Ruth_Teitelbaum"
+          target="_blank"
+          rel="noopener"
+          class="bib-link">
+          Ruth Lichterman Teitelbaum
+          <span class="bib-icon">↗</span>
+      </a>
+  </li>
+
+  <li>
+      WeBuildIt —
+      <a href="https://webuildit.tech/es/top-secret-rosies-pioneras-en-la-programacion-de-eniac/"
+      target="_blank"
+      rel="noopener"
+      class="bib-link">
+      Top Secret Rosies: Pioneras en la programación del ENIAC
+      <span class="bib-icon">↗</span>
+  </a>
+</li>
+
+<li>
+  Computer History Museum —
+  <a href="https://www.computerhistory.org/revolution/birth-of-the-computer/4/78"
+  target="_blank"
+  rel="noopener"
+  class="bib-link">
+  ENIAC Programmers
+  <span class="bib-icon">↗</span>
+</a>
+</li>
+</ul>
+</div>
+
+<a class="back-link" href="../index.html?mode=skipintro">← Volver</a>
+<a class="back-link" href="contacto.html">Formulario de contacto</a>
+
+<p class="meta">
+    Proyecto ENIAC – Tecnología · Curso 2025/2026.
+</p>
+</section>
+
+<aside class="profile-image-wrapper">
+    <img src="../img/RuthLichterman.jpg" alt="Retrato de Ruth Lichterman Teitelbaum">
+</aside>
+</main>
+
+<!-- LOGO -->
+<div class="site-logo" role="img" aria-label="ENIAC PROJECT">
+  <img src="../img/eniac-rojo.png" alt="ENIAC PROJECT logo" />
+</div>
+
+<!-- BOTÓN TEMA-->
+<button class="color-scheme-toggler" type="button" aria-label="Cambiar tema">
+    <span class="color-scheme-toggler__icon color-scheme-toggler__icon--light" aria-hidden="true">☀️</span>
+    <span class="color-scheme-toggler__icon color-scheme-toggler__icon--dark" aria-hidden="true">🌙</span>
+</button>
+</div>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Marlyn Wescoff</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="icon" type="image/png" href="../img/eniac-rojo.png" />
+    
+    <script>
+      (function () {
+        const userTheme = localStorage.getItem('theme');
+        const mediaTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+        document.documentElement.dataset.theme = userTheme || mediaTheme;
+    })();
+</script>
+
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body class="profile-page-body">
+    <main class="profile-container">
+        <section class="profile-text">
+            <div class="badge">ENIAC PROJECT · The Secret Rosies</div>
+            <h1>Marlyn Wescoff Meltzer</h1>
+            <h2>Programadora del ENIAC especializada en cálculos balísticos.</h2>
+
+            <h3>Formación científica y perfil técnico</h3>
+
+            <p>
+                Marlyn Wescoff Meltzer nació en 1922 y se graduó en Matemáticas por la <b>Temple University</b>. Antes de participar en el proyecto ENIAC, se encargó de solucionar ecuaciones balísticas para las fuerzas armadas de Estados Unidos utilizando calculadoras mecánicas.  Esta experiencia le posibilitó entender la manera en que los cálculos manuales podían convertirse en procedimientos automatizados, una idea fundamental para la programación de computadoras electrónicas.
+
+                Destacó por su disciplina, atención al detalle y pensamiento lógico, capacidades fundamentales para manejar el ENIAC, una computadora de 167 m² que no contaba con teclado, pantalla ni lenguaje de programación escrito. Su formación matemática y capacidad para organizar problemas complejos fueron fundamentales para el éxito del equipo.
+
+            </p>
+
+            <h3>Trabajo en ENIAC y desarrollo de algoritmos</h3>
+
+            <p>
+                Marlyn fue la responsable de transformar cálculos matemáticos en procedimientos que la máquina puede llevar a cabo, enlazando cables y alterando secuencias lógicas e interruptores. Fue pionera en la creación de algoritmos eficientes, lo que la ayudó a mejorar su precisión de los resultados y a optimizar el tiempo de cálculo.
+
+                Incluso creó rutinas para la depuración y prueba. De este modo, garantizaba que los programas fueran precisos y reproducibles. Estos conceptos son esenciales en la programación, el desarrollo web y los sistemas digitales actuales. A su vez, registraba procedimientos para que otras programadoras pudieran reproducirlos, lo que facilitaba la normalización de la programación temprana.
+
+            </p>
+
+            <h3>Impacto en la computación moderna</h3>
+
+            <p>
+                Aunque fue menos visible que algunas de sus compañeras, su trabajo ayudó a establecer <b>bases de programación estructurada y optimización de procesos</b>, esenciales en software, bases de datos y sistemas digitales actuales. Su legado demuestra cómo las <b>primeras programadoras del ENIAC</b> no solo operaban máquinas, sino que sentaron los fundamentos de la informática moderna y la tecnología que hoy sustenta Internet.
+            </p>
+
+            <p class="tagline">
+                La experiencia de Wescoff representa el puente entre la era de las calculistas humanas
+                y el nacimiento de la programación automática.
+            </p>
+
+<!-- BIBLIOGRAFÍA -->
+<button type="button" class="back-link bib-toggle" aria-expanded="false">
+    Bibliografía <span class="bib-arrow">▾</span>
+</button>
+
+<div class="bibliography" aria-hidden="true">
+  <ul>
+    <li>
+      Wikipedia —
+      <a href="https://en.wikipedia.org/wiki/Marlyn_Meltzer"
+      target="_blank"
+      rel="noopener"
+      class="bib-link">
+      Marlyn Wescoff Meltzer
+      <span class="bib-icon">↗</span>
+  </a>
+</li>
+
+<li>
+  WeBuildIt —
+  <a href="https://webuildit.tech/es/top-secret-rosies-pioneras-en-la-programacion-de-eniac/"
+  target="_blank"
+  rel="noopener"
+  class="bib-link">
+  Top Secret Rosies: Pioneras en la programación del ENIAC
+  <span class="bib-icon">↗</span>
+</a>
+</li>
+
+<li>
+  Computer History Museum —
+  <a href="https://www.computerhistory.org/revolution/birth-of-the-computer/4/78"
+  target="_blank"
+  rel="noopener"
+  class="bib-link">
+  ENIAC Programmers
+  <span class="bib-icon">↗</span>
+</a>
+</li>
+
+</ul>
+</div>
+
+<a class="back-link" href="../index.html?mode=skipintro">← Volver</a>
+<a class="back-link" href="contacto.html">Formulario de contacto</a>
+
+<br>
+
+<p class="meta">
+    Proyecto ENIAC – Tecnología · Curso 2025/2026.
+</p>
+</section>
+
+<aside class="profile-image-wrapper">
+    <img src="../img/MarlynMeltzer.jpg" alt="Retrato de Marlyn Wescoff Meltzer">
+</aside>
+</main>
+
+<!-- LOGO -->
+<div class="site-logo" role="img" aria-label="ENIAC PROJECT">
+  <img src="../img/eniac-rojo.png" alt="ENIAC PROJECT logo" />
+</div>
+
+<!-- BOTÓN TEMA-->
+<button class="color-scheme-toggler" type="button" aria-label="Cambiar tema">
+    <span class="color-scheme-toggler__icon color-scheme-toggler__icon--light" aria-hidden="true">☀️</span>
+    <span class="color-scheme-toggler__icon color-scheme-toggler__icon--dark" aria-hidden="true">🌙</span>
+</button>
+</div>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>
